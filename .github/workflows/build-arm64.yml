@@ -36,18 +36,18 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Build arm64 debug APK
+      - name: Build update-compatible arm64 APK
         env:
           OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
         run: |
           chmod +x ./gradlew
-          ./gradlew ZalithLauncher:assembleDebug -Darch=arm64 --no-daemon --stacktrace
+          ./gradlew ZalithLauncher:assembleUpdate -Darch=arm64 --no-daemon --stacktrace
 
       - name: Upload arm64 APK
         uses: actions/upload-artifact@v4
         with:
-          name: ZalithLauncher-arm64-debug
-          path: ZalithLauncher/build/outputs/apk/debug/*.apk
+          name: ZalithLauncher-arm64-update
+          path: ZalithLauncher/build/outputs/apk/update/*.apk
           if-no-files-found: error
           retention-days: 14

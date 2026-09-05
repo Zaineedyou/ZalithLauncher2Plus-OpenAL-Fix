@@ -85,6 +85,13 @@ android {
             versionNameSuffix = "-debug"
             signingConfig = signingConfigs.getByName("debugBuild")
         }
+        // Update-compatible build: same package ID and certificate as the published Zalith APK.
+        create("update") {
+            isMinifyEnabled = false
+            applicationIdSuffix = ""
+            versionNameSuffix = ""
+            signingConfig = signingConfigs.getByName("debugBuild")
+        }
     }
 
     splits {
