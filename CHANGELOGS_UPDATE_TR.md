@@ -18,7 +18,7 @@
 - Ses desteği (PLAYBACK_CAPTURE), video-only'ya düşüş
 
 ### Düzeltmeler
-- Boş cihazda OpenAL çökme düzeltmesi (`ALSOFT_DISABLE_EVENTS`)
+- OpenAL-Soft 1.24.2 arm64 güncellemesi: ALC_SOFT_system_events desteklenmeyen Android arka uçlarını doğru bildiriyor
 - Yinelenen libopenal.so uyarısı çözüldü
 - Galeri pelerin küçük resim yüklemesi ana iş parçacığından taşındı
 

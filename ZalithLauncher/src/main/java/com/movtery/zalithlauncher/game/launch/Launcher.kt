@@ -427,7 +427,6 @@ abstract class Launcher(
             if (FFmpegPluginManager.isAvailable) map["POJAV_FFMPEG_PATH"] = FFmpegPluginManager.executablePath!!
 
             map["ALSOFT_DRIVERS"] = "opensl,aaudio"
-            map["ALSOFT_DISABLE_EVENTS"] = "1"
         }
     }
 

@@ -18,7 +18,7 @@
 - Audio support (PLAYBACK_CAPTURE), fallback to video-only
 
 ### Fixes
-- OpenAL crash fix on null device (`ALSOFT_DISABLE_EVENTS`)
+- OpenAL-Soft 1.24.2 arm64 update: ALC_SOFT_system_events now reports unsupported Android backends correctly
 - Duplicate libopenal.so warning resolved
 - Gallery cape thumbnail loading moved off main thread
 
